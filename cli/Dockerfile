@@ -10,6 +10,8 @@ LABEL "com.github.actions.icon"="package"
 LABEL "com.github.actions.color"="blue"
 COPY LICENSE README.md THIRD_PARTY_NOTICE.md /
 
+RUN apt-get install -y bash
+
 COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
